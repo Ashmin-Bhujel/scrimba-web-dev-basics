@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Urbanist, sans-serif;
+  /* outline: 1px solid black; */
+}
+
+:root {
+  --snow: #fffbff;
+  --rich-black: #00171f;
+  --buff: #d9ac7cff;
+  --cadet-gray: #a4afbdff;
+  --seal-brown: #532c10ff;
+}
+
+body {
+  background: linear-gradient(var(--cadet-gray), var(--buff));
+}
+
+#hero-section,
+#activity-section,
+#guide-section {
+  width: 100%;
+  min-height: 1000px;
+  padding: 1rem;
+}
+
+/* Hero section */
+#hero-section {
+  background: url("../images/bhaktapur.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+#hero-section h1 {
+  background: var(--buff);
+  color: var(--snow);
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  text-shadow: 0 0 1px var(--rich-black);
+}
+
+#hero-section h2 {
+  background: var(--seal-brown);
+  color: var(--snow);
+  font-size: 2.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-shadow: 0 0 1px var(--rich-black);
+}
+
+/* Activity section */
+#activity-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#activity-section h2 {
+  margin-block: 4rem;
+  font-size: 2.25rem;
+}
+
+#activity-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#activity-cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+}
+
+.activity-card {
+  width: 400px;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.activity-card .activity-img-wrapper {
+  width: 350px;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.activity-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  scale: 1.15;
+  transition: scale 300ms ease-in-out;
+}
+
+.activity-card:hover .activity-img-wrapper img {
+  scale: 1;
+}
+
+/* Guide section */
+#guide-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#guide-section h2 {
+  margin-block: 4rem;
+  font-size: 2.5rem;
+}
+
+#guide-business-card {
+  width: 400px;
+  max-width: 100%;
+  border: 2px dashed var(--rich-black);
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#guide-business-card img {
+  width: 400px;
+  max-width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 1rem;
+}
+
+#guide-business-card-text {
+  max-width: 100%;
+}
+
+#guide-business-card-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
